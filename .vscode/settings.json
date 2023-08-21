@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/ba3d4ca4-a263-4a67-bf87-09899d3d4536/resourceGroups/CommuniShare/providers/Microsoft.Web/sites/CommuniShare",
+    "appService.deploySubpath": "."
+}

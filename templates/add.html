@@ -1,0 +1,37 @@
+{% extends "layout.html" %} {% block content %}
+
+<div class="container">
+  <h2>Post a Request:</h2>
+
+  <div class="container text-left">
+    <div class="inputbox-add-request" id="add-request">
+      <form method="POST" action="/add">
+        <div class="form-group">
+          <input
+            class="form-control item"
+            name="description"
+            placeholder="Describe: e.g. 3/32 Alen Key"
+            required
+          />
+          <input
+            class="form-control item"
+            name="day"
+            placeholder="Date: e.g. Jan. 20"
+            required
+          />
+          <input
+            class="form-control item"
+            name="time"
+            placeholder="Time: e.g. 5:00 pm"
+            required
+          />
+          <button class="btn btn-primary" id="request-submit" type="submit">
+            Add Request
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <br />
+</div>
+{% endblock content %}

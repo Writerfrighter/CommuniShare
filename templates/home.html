@@ -1,0 +1,31 @@
+{% extends "layout.html" %} {% block content %}
+
+<div class="container">
+  <h2>All Requests</h2>
+
+  <ul class="requests">
+    {% if list != "" %} {% for request in list %}
+
+    <li>
+      <div class="date">
+        <div class="day">{{request[3]}}</div>
+        <div class="time">{{request[4]}}</div>
+      </div>
+      <div class="details">
+        <span class="host">
+          <a href="#"> {{request[1]}} </a>
+          {% if request[5] != "Completed" %}
+          <span class="badge badge-primary">{{request[5]}}</span>
+
+          {% else %}
+          <span class="badge badge-success">{{request[5]}}</span>
+          {% endif %}
+        </span>
+        <span class="description"> {{request[2]}}</span><br />
+      </div>
+    </li>
+
+    {% endfor %} {% endif %}
+  </ul>
+</div>
+{% endblock content %}

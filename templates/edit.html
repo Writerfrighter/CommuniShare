@@ -1,0 +1,45 @@
+{% extends "layout.html" %} {% block content %}
+
+<div class="container">
+  <h2>Edit a Request:</h2>
+
+  <div class="container text-left">
+    <div class="inputbox-add-request" id="add-request">
+      <form method="POST" action="/update/{{request[0]}}">
+        <div class="form-group">
+          <input
+            class="form-control item"
+            name="description"
+            placeholder="Describe: e.g. 3/32 Alen Key"
+            required
+            value="{{request[2]}}"
+          />
+          <input
+            class="form-control item"
+            name="day"
+            placeholder="Date: e.g. Jan. 20"
+            required
+            value="{{request[3]}}"
+          />
+          <input
+            class="form-control item"
+            name="time"
+            placeholder="Time: e.g. 5:00 pm"
+            required
+            value="{{request[4]}}"
+          />
+          <select class="form-control item" name="status" required>
+            <option selected hidden>{{request[5]}}</option>
+            <option value="Still Active">Still Active</option>
+            <option value="Completed">Completed</option>
+          </select>
+          <button class="btn btn-primary" id="request-submit" type="submit">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <br />
+</div>
+{% endblock content %}
